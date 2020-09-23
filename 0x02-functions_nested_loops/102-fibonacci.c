@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - function
+ * main - prints fibonacci numbers
  * Return: 0 (Success)
  */
 int main(void)

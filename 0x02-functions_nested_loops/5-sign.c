@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *print_sign - function that display the sign with absolute value 
+ *print_sign - function that display the sign with absolute value
  *@n: int
  *Return: 0
  */

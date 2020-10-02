@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- *string_toupper - function that changes all lowercase letters of a string to uppercase
+ *string_toupper - function that changes all lowercase letters of a string
+ *to uppercase
  *@s: char string
- *return: s
+ *Return: s
  **/
 char *string_toupper(char *s)
-
 {
 	int i = 0;
 

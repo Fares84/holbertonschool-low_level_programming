@@ -3,7 +3,7 @@
 /**
  *cap_string - function that capitalizes all words of a string
  *@s: string
- *return: s
+ *Return: s
  **/
 
 char *cap_string(char *s)
@@ -12,7 +12,11 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0 || s[i-1] == '')
+		if (i == 0 || s[i - 1] == ' ' || s[i - 1] == ',' || s[i - 1] ==
+		    ';' || s[i - 1] == '.' || s[i - 1] == '!' || s[i - 1] == '?'
+		    || s[i - 1] == '"' || s[i - 1] == '(' || s[i - 1] == ')'
+		    || s[i - 1] == '\n' || s[i - 1] == '{' || s[i - 1] == '}'
+		    || s[i - 1] == '\t')
 			if (s[i] >= 'a' && s[i] <= 'z')
 			{
 				s[i] = s[i] - 32;

@@ -1,24 +1,20 @@
 #include "holberton.h"
 
 /**
- *_strncpy - function that  copy string
- *@dest: destination string
- *@src: source string
- *@n: long
- *Return: dest char
- **/
-char *_strncpy(char *dest, char *src, int n)
+ * _strcpy - print reverse characters.
+ * @dest: Array
+ * @src: - Number of array
+ * Return: Always 0.
+ */
+char *_strcpy(char *dest, char *src)
 {
-
 	int i;
 
-	for (i = 0 ; i < n && src[i] != '\0' ; i++)
+	for (i = 0; src[i]; i++)
 	{
 		dest[i] = src[i];
 	}
-	for (; i < n; i++)
-	{
-		dest[i] = '\0';
-	}
+	dest[i] = src[i];
 	return (dest);
+
 }

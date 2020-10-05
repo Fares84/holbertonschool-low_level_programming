@@ -1,21 +1,25 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * print_chessboard - function that prints the sum of the two diagonals of a squ
- *are matrix of integers
- * @a: cheese
- * Return: Nothing.
- */
-void print_chessboard(char (*a)[8])
+ * print_diagsums - print the sum of the two diagonals of a squeare matrix
+ * @a: pointer to an integer
+ * @size: int
+ * Return: void
+ * */
+void print_diagsums(int *a, int size)
 {
-	int i, j;
+	int i;
+	int diag1 = 0;
+	int diag2 = 0;
 
-	for (i = 0; i < 8; i++)
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar (a[i][j]);
-		}
-		_putchar('\n');
+		diag1 = diag1 + a[(size + 1) * i];
 	}
+	for (i = 1; i < size + i; i++)
+	{
+		diag2 = diag2 + a[(size - 1) * i];
+	}
+	printf("%d, %d\n", diag1, diag2);
 }

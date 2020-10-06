@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * _strstr - prints buffer in hexa
+ * _strstr -  function that locates a substring
  * @haystack: buffer
  * @needle: buffer2
- * Return: Nothing.
+ * Return: haystack
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -12,19 +12,16 @@ char *_strstr(char *haystack, char *needle)
 
 	while (haystack[i] != '\0')
 	{
-
 		j = 0;
-		while (needle[j] == haystack[i] && haystack[i] != '\0'
-		       && haystack[i] != '\0')
+		while (needle[j] != '\0' && needle[j] == haystack[i + j])
 		{
-			i++;
 			j++;
 		}
 		if (needle[j] == '\0')
 		{
-			return (haystack);
+			return (&haystack[i]);
 		}
-		break;
+		i++;
 	}
 	return (0);
 }

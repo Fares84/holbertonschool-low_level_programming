@@ -2,11 +2,12 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - print the sum of the two diagonals of a squeare matrix
+ * print_diagsums - function that print the sum of the two diagonals of squeare
+ * matrix
  * @a: pointer to an integer
  * @size: int
  * Return: void
- * */
+ **/
 void print_diagsums(int *a, int size)
 {
 	int i;
@@ -17,7 +18,7 @@ void print_diagsums(int *a, int size)
 	{
 		diag1 = diag1 + a[(size + 1) * i];
 	}
-	for (i = 1; i < size + i; i++)
+	for (i = 1; i < size + 1; i++)
 	{
 		diag2 = diag2 + a[(size - 1) * i];
 	}

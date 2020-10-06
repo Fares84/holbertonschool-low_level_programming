@@ -4,16 +4,19 @@
  *_strchr - function that locates a character in a string
  * @s: buffer
  * @c: char
- * Return: s
+ * Return: s+i
  **/
 char *_strchr(char *s, char c)
 {
 	int i;
 
-	for (i = 0; s[i] != 'c'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] = 'c')
+		if (s[i] == c)
 		    break;
 	}
-		return (s);
+	if (s[i] != c)
+		return (0);
+
+	return (s + i);
 }

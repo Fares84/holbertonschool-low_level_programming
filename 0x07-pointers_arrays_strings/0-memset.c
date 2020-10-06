@@ -4,7 +4,7 @@
  *_memset - function that fills memory with a constant byte
  *@s: char
  *@b: char
- *@n: size 
+ *@n: size
  *Return: s
  **/
 char *_memset(char *s, char b, unsigned int n)

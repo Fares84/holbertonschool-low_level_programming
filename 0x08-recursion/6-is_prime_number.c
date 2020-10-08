@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 
 /**
  *is_prime - function that give the prime number
@@ -8,7 +8,7 @@
  **/
 int is_prime(int i, int n)
 {
-	if (!(n % i))
+	if ( n % i == 0 || n < 2)
 	{
 		return (0);
 	}

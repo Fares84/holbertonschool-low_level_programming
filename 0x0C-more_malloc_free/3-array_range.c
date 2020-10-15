@@ -9,6 +9,10 @@
  **/
 int *array_range(int min, int max)
 {
+	int *mem;
+	int pos;
+	int i;
+	
 	if (min  > max)
 		return (NULL);
 	pos = max - min;

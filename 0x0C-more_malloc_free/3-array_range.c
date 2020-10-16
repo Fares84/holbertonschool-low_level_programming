@@ -20,7 +20,7 @@ int *array_range(int min, int max)
 
 	if (mem == NULL)
 		return (NULL);
-	for (i = 0; i < max - min; i++)
+	for (i = 0; i < pos; i++)
 		mem[i] = min + i;
 	return (mem);
 }

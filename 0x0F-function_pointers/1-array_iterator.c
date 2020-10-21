@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 
 /**
@@ -7,10 +8,10 @@
  *@size: variable size_t
  *@action: function that point to a function which receives an int
  *Return: void
- **/
+*/
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	insigned int el;
+	unsigned int el;
 
 	if (action && array)
 

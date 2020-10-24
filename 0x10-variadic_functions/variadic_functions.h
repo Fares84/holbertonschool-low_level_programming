@@ -15,6 +15,7 @@ typedef struct ch
 	void (*f)(va_list);
 }ch_f;
 
+int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);

@@ -1,0 +1,33 @@
+#include "holberton.h"
+#include <stdlib.h>
+
+/**
+ **_strdup - function function that returns a pointer to a newly allocated
+ * space in memory
+ *@str: string to copy
+ *Return: char
+ **/
+char *_strdup(char *str)
+{
+	unsigned int i, j;
+	char *length;
+
+	if (str == NULL)
+	return (NULL);
+
+	for (i = 0; str[i]; i++);
+	{
+		length = malloc(i * sizeof(char));
+	}
+	if (length == NULL)
+	{
+		return (NULL);
+	}
+
+	for (j = 0; j < i; j++)
+	{
+		length[j] = str[j];
+	}
+	return (length);
+
+}

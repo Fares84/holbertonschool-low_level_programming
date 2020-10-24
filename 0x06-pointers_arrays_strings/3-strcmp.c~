@@ -1,0 +1,24 @@
+#include "holberton.h"
+
+/**
+ *function -  that compares two strings
+ *@dest: char
+ *@src: char
+ *@n: int
+ *return: s1
+ **/
+
+int _strcmp(char *s1, char *s2)
+{
+	int i;
+
+	for( i=0 ;  i != '\0', i++)
+	{
+		int strcmp(const char *s1, const char *s2);
+	}
+	for(i < n)
+	{
+		_putchar( [s1]=[s2])
+			}
+	return(0);
+}

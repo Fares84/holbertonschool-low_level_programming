@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
 #include "variadic_functions.h"
 
 /**
@@ -50,8 +47,8 @@ void arg_s(va_list ls)
 void print_all(const char * const format, ...)
 {
 	unsigned int i = 0, j = 0;
-	va_list ls;
-	char *separator = "";
+        va_list ls;
+        char *separator = "";
 	ch_f ls_arg[] = {
 		{'c', arg_c},
 		{'i', arg_i},
@@ -60,7 +57,7 @@ void print_all(const char * const format, ...)
 		{'\0', NULL},
 	};
 
-	va_start(ls, format};
+	va_start(ls, format);
 
 	while (format && format[i])
 	{

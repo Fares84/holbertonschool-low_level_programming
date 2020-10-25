@@ -34,9 +34,10 @@ void arg_f(va_list ls)
 void arg_s(va_list ls)
 {
 	char *s = va_arg(ls, char *);
+
 	if (!s)
-		s= "(nil)";
-	printf ("%s", s);
+	s = "(nil)";
+	printf("%s", s);
 }
 
 /**
@@ -47,8 +48,8 @@ void arg_s(va_list ls)
 void print_all(const char * const format, ...)
 {
 	unsigned int i = 0, j = 0;
-        va_list ls;
-        char *separator = "";
+	va_list ls;
+	char *separator = "";
 	ch_f ls_arg[] = {
 		{'c', arg_c},
 		{'i', arg_i},

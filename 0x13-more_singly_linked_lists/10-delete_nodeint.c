@@ -21,14 +21,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(trash);
 		return (1);
 	}
-	if (i < index)
+	if (i < index - 1)
 	{
 		trash = trash->next;
 		i++;
 	}
 	if (trash == NULL || trash->next == NULL)
 		return (-1);
-	node = trash->next->next;
+	node = trash->next;
 	free(trash->next);
 	trash = node;
 	return (1);

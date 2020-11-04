@@ -10,7 +10,7 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *insert_node, *get_node;
-	unsigned int i;
+	unsigned int i = 0;
 
 	get_node = *head;
 

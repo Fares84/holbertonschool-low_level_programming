@@ -28,7 +28,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	if (trash == NULL || trash->next == NULL)
 		return (-1);
-	node = trash->next;
+	node = trash->next->next;
 	free(trash->next);
 	trash = node;
 	return (1);

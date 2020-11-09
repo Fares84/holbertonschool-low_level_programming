@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 
 /**
  *append_text_to_file -  function that appends text at the end of a file
@@ -27,6 +27,6 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (wt == -1)
 		return (-1);
-
+	close(fd);
 	return (1);
 }

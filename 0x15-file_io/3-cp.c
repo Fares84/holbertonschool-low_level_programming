@@ -53,33 +53,36 @@ void error100(int s)
 int main(int argc, char **argv)
 {
 	char buffer[1024];
-	int file_from, file_to, wt, rt;
+	int file_from = 0, file_to = 0, wt = 0, rt = 1, cr = 0, cw = 0;
 
 	if (argc != 3)
 		error97();
-	if (argv[1] == NULL)
-		error98(argv[1]);
-	if (!argv[2])
-		error99(argv[2]);
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
-	rt = read(file_from, buffer, 1024);
-	if (rt == -1)
+	if (file_from  == -1)
 		error98(argv[1]);
+	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	if (file_to == -1)
+		error99(argv[2]);
+
+
 	while (rt)
 	{
-		wt = read(file_to, buffer, rt);
-		if (wt == -1)
-			error98(argv[1]);
 		rt = read(file_from, buffer, 1024);
 		if (rt == -1)
 			error98(argv[1]);
+		rt = read(file_from, buffer, 1024);
+		if (rt > 0)
+		{
+			wt = write(file_to, buffer, rt);
+			if (wt == -1)
+				error99(argv[2]);
+		}
 	}
-	file_from = close(file_from);
-	if (file_from == -1)
-		error100(file_from);
-	file_to = close(file_to);
-	if (file_to == -1)
-		error100(file_to);
+	cr = close(file_from);
+	if (cr == -1)
+		error100(cr);
+	cw = close(file_to);
+	if (cw == -1)
+		error100(cw);
 	return (0);
 }

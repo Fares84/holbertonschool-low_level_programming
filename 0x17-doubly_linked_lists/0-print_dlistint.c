@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- *print_dlisint -  function that prints all the elements of a dlistint_t list
+ *print_dlistint - function that prints all the elements of a dlistint_t list
  *@h: head node
  *Return: number of nodes printed
  */
@@ -15,5 +15,5 @@ size_t print_dlistint(const dlistint_t *h)
 		h = h->next;
 		n++;
 	}
-	return(n);
+	return (n);
 }

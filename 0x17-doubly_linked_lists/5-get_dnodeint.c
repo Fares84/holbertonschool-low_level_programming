@@ -19,6 +19,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		if (idx == index)
 			return (new_node);
 	new_node = new_node->next;
+	idx++;
 	}
 	return (new_node);
 }

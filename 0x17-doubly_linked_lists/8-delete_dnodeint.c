@@ -1,4 +1,4 @@
-#include "lists.h"
+B#include "lists.h"
 
 /**
  *delete_dnodeint_at_index - delete node at given index DLL
@@ -19,7 +19,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		if (!save_prev)
 			return (-1);
-		else
+		if (*head)
 			(*head)->prev = NULL;
 		return (1);
 	}
